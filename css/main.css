@@ -20,7 +20,25 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    position: relative;
 }
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../resources/images/哎ber就你抓我图片呢.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: #6495ed;
+    filter: saturate(0.5);
+    z-index: -1;
+}
+
 .header {
     position: fixed;
     width: 100%;
