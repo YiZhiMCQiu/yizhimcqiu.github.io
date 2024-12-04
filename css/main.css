@@ -1,24 +1,51 @@
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    height: 10px;
+	width: 2px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #6495ed;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
 }
 .header {
+    position: fixed;
+    width: 100%;
     height: 50px;
     background-color:#6495ed;
     color:#faebd7;
     line-height: 50px;
     display: flex;
+    margin: -50px 0;
 }
 .header > * {
     margin: 0 10px;
 }
 .side {
-    width: 200px;
+    position: fixed;
+    width: 20vh;
     background-color: #a9a9a9;
     color: white;
-    margin: 5px 5px;
+    margin: 55px 5px;
     font-weight: bold;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vb;
 }
 .side > * {
     margin: 5px 5px;
