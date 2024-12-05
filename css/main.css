@@ -1,3 +1,8 @@
+:root {
+    --background-filter: none;
+    --font-color: #faebd7
+}
+
 ::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
@@ -22,6 +27,7 @@ body {
     font-family: Arial, sans-serif;
     position: relative;
     color: #faebd7;
+    background-color: #6495ed;
 }
 
 body::after {
@@ -36,7 +42,7 @@ body::after {
     background-position: center center;
     background-attachment: fixed;
     background-color: #6495ed;
-    filter: saturate(0.2) brightness(20%);
+    filter: var(--background-filter);
     z-index: -1;
 }
 
