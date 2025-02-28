@@ -1,0 +1,1 @@
+import{_ as n,c as t,a as e,o as s}from"./index-q8tzBJUL.js";const c={},r={class:"container"};function a(l,o){return s(),t("div",r,o[0]||(o[0]=[e("h1",null,"404 Not Found",-1),e("p",null,"网页不见啦～",-1)]))}const d=n(c,[["render",a]]);export{d as default};
