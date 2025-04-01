@@ -7,7 +7,7 @@
 function addResource(name, href, category) {
     const link = document.createElement("a");
     link.className = "resource-link";
-    link.href = href.replace(/@/g, window.location.href.replace(/\/index.html/g, ""));
+    link.href = href.replace(/@/g, window.location.href.replace(/index.html/g, ""));
     link.textContent = name;
 
     const container = category.querySelector(".links-container");
@@ -50,4 +50,4 @@ addResource("Modrinth", "https://modrinth.com", resourcesCategory)
 
 
 modpacksCategory = createCategory("整合包", "local-resources")
-addResource("光影整合", "@/modpacks/shaders.zip", modpacksCategory)
+addResource("光影整合", "@modpacks/shaders.zip", modpacksCategory)
