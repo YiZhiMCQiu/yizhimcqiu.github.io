@@ -1,0 +1,834 @@
+-------------------------------------
+Translated Report (Full Report Below)
+-------------------------------------
+
+Process:               PCL-Mac [11536]
+Path:                  /Volumes/VOLUME/*/PCL-Mac.app/Contents/MacOS/PCL-Mac
+Identifier:            io.github.pcl-communtiy.PCL-Mac
+Version:               1.0 (1)
+Code Type:             ARM-64 (Native)
+Parent Process:        launchd [1]
+User ID:               501
+
+Date/Time:             2025-05-25 18:11:54.8149 +0800
+OS Version:            macOS 14.7.6 (23H626)
+Report Version:        12
+Anonymous UUID:        6E2B97B7-1933-11C9-28F0-E5D8451867D6
+
+Sleep/Wake UUID:       38F14CC9-2972-4064-862E-0C3734CDA61E
+
+Time Awake Since Boot: 59000 seconds
+Time Since Wake:       889 seconds
+
+System Integrity Protection: enabled
+
+Crashed Thread:        0  Dispatch queue: com.apple.main-thread
+
+Exception Type:        EXC_BAD_ACCESS (SIGSEGV)
+Exception Codes:       KERN_PROTECTION_FAILURE at 0x000000016d1cbfe8
+Exception Codes:       0x0000000000000002, 0x000000016d1cbfe8
+
+Termination Reason:    Namespace SIGNAL, Code 11 Segmentation fault: 11
+Terminating Process:   exc handler [11536]
+
+VM Region Info: 0x16d1cbfe8 is in 0x1699c8000-0x16d1cc000;  bytes after start: 58736616  bytes before end: 23
+      REGION TYPE                    START - END         [ VSIZE] PRT/MAX SHRMOD  REGION DETAIL
+      MALLOC_MEDIUM               140000000-148000000    [128.0M] rw-/rwx SM=PRV  
+      GAP OF 0x219c8000 BYTES
+--->  STACK GUARD                 1699c8000-16d1cc000    [ 56.0M] ---/rwx SM=NUL  stack guard for thread 0
+      Stack                       16d1cc000-16d9c8000    [ 8176K] rw-/rwx SM=SHM  thread 0
+
+Thread 0 Crashed::  Dispatch queue: com.apple.main-thread
+0   CarbonCore                    	       0x184841860 FSGetCanonicalPathWithIsMountPoint(char const*, char*, unsigned int, unsigned char, int*, unsigned char*) + 72
+1   CoreServicesInternal          	       0x184b628d8 parseAttributeBuffer(__CFAllocator const*, unsigned char const*, unsigned char, attrlist const*, void const*, void**, _FileAttributes*, unsigned int*, unsigned char) + 3112
+2   CoreServicesInternal          	       0x184b370f8 corePropertyProviderPrepareValues(__CFURL const*, __FileCache*, __CFString const* const*, void const**, long, void const*, __CFError**) + 1340
+3   CoreServicesInternal          	       0x184b36b48 prepareValuesForBitmap(__CFURL const*, __FileCache*, _FilePropertyBitmap*, __CFError**) + 460
+4   CoreServicesInternal          	       0x184b3f694 _FSURLCopyResourcePropertiesForKeysInternal(__CFURL const*, __CFArray const*, void*, __CFError**, unsigned char) + 1160
+5   CoreFoundation                	       0x1814dcec4 CFURLCopyResourcePropertiesForKeys + 100
+6   CoreFoundation                	       0x1815531d8 _CFURLCopyFileReferenceURLPath + 180
+7   CoreFoundation                	       0x181552f70 CFURLCreateFileReferenceURL + 244
+8   CoreFoundation                	       0x181558860 -[NSURL fileReferenceURL] + 104
+9   Foundation                    	       0x1826c8acc -[NSFileManager componentsToDisplayForPath:] + 84
+10  Foundation                    	       0x18260cdbc pathComponentFromPath + 548
+11  Foundation                    	       0x18260c92c -[NSError(NSErrorPrivate) _formatCocoaErrorString:parameters:applicableFormatters:count:] + 220
+12  Foundation                    	       0x18260c3c4 -[NSError(NSErrorPrivate) _cocoaErrorString:fromBundle:tableName:] + 544
+13  Foundation                    	       0x18260c10c -[NSError(NSErrorPrivate) _cocoaErrorString:] + 72
+14  Foundation                    	       0x18260bfd0 -[NSError _cocoaErrorStringWithKind:variant:] + 144
+15  Foundation                    	       0x18260bf08 -[NSError _cocoaErrorStringWithKind:] + 324
+16  Foundation                    	       0x18260bd40 -[NSError _retainedUserInfoCallBackForKey:] + 68
+17  CoreFoundation                	       0x1814fc4b4 ____CFErrorSetCallBackForDomainNoLock_block_invoke + 32
+18  CoreFoundation                	       0x1814fc3e8 _CFErrorCopyUserInfoKeyFromCallBack + 92
+19  CoreFoundation                	       0x1814fc040 _CFErrorFormatDebugDescriptionAux + 120
+20  CoreFoundation                	       0x1814fbf98 _CFErrorCreateDebugDescription + 88
+21  Foundation                    	       0x18260bce4 -[NSError description] + 16
+22  Foundation                    	       0x182b19594 protocol witness for CustomStringConvertible.description.getter in conformance NSObject + 32
+23  libswiftCore.dylib            	       0x1911a91b0 _print_unlocked<A, B>(_:_:) + 1104
+24  PCL-Mac                       	       0x10247a17c 0x102438000 + 270716
+25  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+26  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+27  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+28  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+29  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+30  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+31  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+32  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+33  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+34  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+35  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+36  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+37  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+38  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+39  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+40  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+41  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+42  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+43  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+44  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+45  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+46  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+47  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+48  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+49  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+50  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+51  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+52  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+53  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+54  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+55  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+56  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+57  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+58  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+59  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+60  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+61  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+62  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+63  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+64  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+65  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+66  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+67  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+68  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+69  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+70  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+71  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+72  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+73  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+74  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+75  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+76  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+77  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+78  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+79  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+80  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+81  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+82  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+83  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+84  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+85  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+86  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+87  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+88  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+89  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+90  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+91  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+92  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+93  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+94  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+95  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+96  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+97  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+98  PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+99  PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+100 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+101 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+102 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+103 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+104 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+105 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+106 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+107 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+108 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+109 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+110 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+111 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+112 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+113 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+114 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+115 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+116 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+117 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+118 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+119 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+120 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+121 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+122 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+123 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+124 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+125 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+126 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+127 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+128 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+129 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+130 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+131 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+132 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+133 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+134 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+135 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+136 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+137 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+138 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+139 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+140 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+141 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+142 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+143 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+144 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+145 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+146 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+147 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+148 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+149 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+150 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+151 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+152 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+153 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+154 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+155 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+156 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+157 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+158 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+159 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+160 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+161 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+162 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+163 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+164 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+165 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+166 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+167 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+168 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+169 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+170 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+171 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+172 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+173 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+174 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+175 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+176 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+177 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+178 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+179 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+180 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+181 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+182 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+183 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+184 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+185 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+186 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+187 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+188 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+189 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+190 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+191 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+192 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+193 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+194 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+195 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+196 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+197 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+198 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+199 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+200 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+201 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+202 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+203 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+204 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+205 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+206 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+207 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+208 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+209 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+210 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+211 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+212 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+213 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+214 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+215 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+216 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+217 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+218 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+219 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+220 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+221 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+222 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+223 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+224 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+225 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+226 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+227 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+228 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+229 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+230 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+231 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+232 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+233 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+234 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+235 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+236 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+237 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+238 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+239 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+240 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+241 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+242 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+243 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+244 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+245 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+246 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+247 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+248 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+249 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+250 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+251 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+252 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+253 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+254 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+255 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+256 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+257 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+258 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+259 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+260 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+261 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+262 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+263 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+264 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+265 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+266 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+267 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+268 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+269 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+270 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+271 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+272 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+273 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+274 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+275 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+276 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+277 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+278 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+279 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+280 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+281 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+282 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+283 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+284 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+285 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+286 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+287 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+288 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+289 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+290 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+291 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+292 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+293 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+294 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+295 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+296 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+297 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+298 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+299 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+300 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+301 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+302 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+303 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+304 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+305 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+306 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+307 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+308 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+309 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+310 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+311 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+312 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+313 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+314 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+315 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+316 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+317 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+318 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+319 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+320 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+321 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+322 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+323 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+324 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+325 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+326 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+327 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+328 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+329 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+330 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+331 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+332 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+333 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+334 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+335 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+336 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+337 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+338 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+339 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+340 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+341 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+342 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+343 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+344 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+345 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+346 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+347 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+348 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+349 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+350 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+351 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+352 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+353 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+354 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+355 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+356 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+357 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+358 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+359 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+360 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+361 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+362 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+363 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+364 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+365 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+366 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+367 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+368 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+369 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+370 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+371 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+372 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+373 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+374 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+375 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+376 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+377 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+378 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+379 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+380 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+381 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+382 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+383 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+384 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+385 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+386 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+387 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+388 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+389 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+390 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+391 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+392 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+393 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+394 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+395 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+396 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+397 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+398 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+399 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+400 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+401 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+402 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+403 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+404 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+405 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+406 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+407 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+408 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+409 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+410 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+411 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+412 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+413 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+414 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+415 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+416 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+417 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+418 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+419 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+420 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+421 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+422 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+423 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+424 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+425 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+426 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+427 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+428 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+429 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+430 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+431 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+432 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+433 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+434 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+435 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+436 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+437 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+438 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+439 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+440 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+441 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+442 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+443 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+444 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+445 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+446 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+447 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+448 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+449 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+450 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+451 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+452 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+453 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+454 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+455 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+456 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+457 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+458 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+459 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+460 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+461 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+462 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+463 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+464 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+465 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+466 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+467 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+468 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+469 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+470 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+471 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+472 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+473 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+474 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+475 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+476 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+477 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+478 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+479 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+480 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+481 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+482 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+483 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+484 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+485 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+486 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+487 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+488 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+489 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+490 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+491 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+492 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+493 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+494 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+495 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+496 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+497 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+498 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+499 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+500 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+501 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+502 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+503 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+504 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+505 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+506 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+507 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+508 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+509 PCL-Mac                       	       0x102479ab8 0x102438000 + 268984
+510 PCL-Mac                       	       0x10247a1bc 0x102438000 + 270780
+
+Thread 1:
+0   libsystem_pthread.dylib       	       0x1813f5d20 start_wqthread + 0
+
+Thread 2:
+0   libsystem_pthread.dylib       	       0x1813f5d20 start_wqthread + 0
+
+
+Thread 0 crashed with ARM Thread State (64-bit):
+    x0: 0x000000016d1cdb80   x1: 0x000000016d1ccc70   x2: 0x0000000000000400   x3: 0x0000000000000000
+    x4: 0x0000000000000000   x5: 0x0000000000000000   x6: 0x0000000000000000   x7: 0x0000000000000001
+    x8: 0xbcb50b2e6279008b   x9: 0x0000000000000400  x10: 0x0000000000000000  x11: 0x0000000000000000
+   x12: 0x0000000000000000  x13: 0x0000000000000000  x14: 0x0000000042000000  x15: 0x00000001e9274e98
+   x16: 0x000000018484b094  x17: 0x00000001f396a608  x18: 0x0000000000000000  x19: 0x0000000000000000
+   x20: 0x000000016d1ccc70  x21: 0x0000000000000000  x22: 0x0000000000000400  x23: 0x000000016d1cdb80
+   x24: 0x0000000000000000  x25: 0x00000000d61f9e0d  x26: 0x0000000000000001  x27: 0x000000000000006e
+   x28: 0x0000000000000350   fp: 0x000000016d1ccc60   lr: 0x5654000184b628d8
+    sp: 0x000000016d1cbfe0   pc: 0x0000000184841860 cpsr: 0x80001000
+   far: 0x000000016d1cbfe8  esr: 0x92000047 (Data Abort) byte write Translation fault
+
+Binary Images:
+       0x1028a4000 -        0x1028affff libobjc-trampolines.dylib (*) <bc93a03a-e201-3510-816f-92da60f1109b> /usr/lib/libobjc-trampolines.dylib
+       0x102438000 -        0x1024a3fff io.github.pcl-communtiy.PCL-Mac (1.0) <8807e47b-3f0c-303c-b2ea-1a32753baa1b> /Volumes/VOLUME/*/PCL-Mac.app/Contents/MacOS/PCL-Mac
+       0x18482c000 -        0x184b31fff com.apple.CoreServices.CarbonCore (1333) <78261def-91ac-322e-8b7e-7248510a6796> /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+       0x184b32000 -        0x184b72ff3 com.apple.CoreServicesInternal (505) <f24e6bd4-788e-38bd-b54c-06ef76391158> /System/Library/PrivateFrameworks/CoreServicesInternal.framework/Versions/A/CoreServicesInternal
+       0x18145c000 -        0x181934fff com.apple.CoreFoundation (6.9) <2b20500a-bcca-3a13-9dd0-934dd58a779c> /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+       0x1825b2000 -        0x18320ffff com.apple.Foundation (6.9) <fd237f18-5366-346c-b9c4-2aae82874d20> /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+       0x1910d0000 -        0x19162dfff libswiftCore.dylib (*) <2f8ba773-d189-30ed-817b-58160dd3e9f5> /usr/lib/swift/libswiftCore.dylib
+               0x0 - 0xffffffffffffffff ??? (*) <00000000-0000-0000-0000-000000000000> ???
+       0x1813f4000 -        0x181400fff libsystem_pthread.dylib (*) <57cf0002-c127-3580-a0b7-fd447cc0f745> /usr/lib/system/libsystem_pthread.dylib
+
+External Modification Summary:
+  Calls made by other processes targeting this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by all processes on this machine:
+    task_for_pid: 10
+    thread_create: 0
+    thread_set_state: 40
+
+VM Region Summary:
+ReadOnly portion of Libraries: Total=1.0G resident=0K(0%) swapped_out_or_unallocated=1.0G(100%)
+Writable regions: Total=1.3G written=0K(0%) resident=0K(0%) swapped_out=0K(0%) unallocated=1.3G(100%)
+
+                                VIRTUAL   REGION 
+REGION TYPE                        SIZE    COUNT (non-coalesced) 
+===========                     =======  ======= 
+Activity Tracing                   256K        1 
+AttributeGraph Data               1024K        1 
+ColorSync                          560K       26 
+CoreAnimation                      448K       28 
+CoreGraphics                        32K        2 
+Foundation                          16K        1 
+Kernel Alloc Once                   32K        1 
+MALLOC                             1.2G       78 
+MALLOC guard page                  288K       18 
+STACK GUARD                       56.0M        3 
+Stack                             9264K        3 
+VM_ALLOCATE                        128K        8 
+__AUTH                            1429K      260 
+__AUTH_CONST                      23.5M      443 
+__CTF                               824        1 
+__DATA                            9919K      430 
+__DATA_CONST                      21.9M      448 
+__DATA_DIRTY                      1298K      139 
+__FONT_DATA                          4K        1 
+__LINKEDIT                       525.4M        3 
+__OBJC_RO                         71.9M        1 
+__OBJC_RW                         2200K        1 
+__TEXT                           544.0M      465 
+dyld private memory                272K        2 
+mapped file                      294.1M       34 
+shared memory                      848K       13 
+===========                     =======  ======= 
+TOTAL                              2.8G     2411 
+
+
+
+-----------
+Full Report
+-----------
+
+{"app_name":"PCL-Mac","timestamp":"2025-05-25 18:11:56.00 +0800","app_version":"1.0","slice_uuid":"8807e47b-3f0c-303c-b2ea-1a32753baa1b","build_version":"1","platform":1,"bundleID":"io.github.pcl-communtiy.PCL-Mac","share_with_app_devs":0,"is_first_party":0,"bug_type":"309","os_version":"macOS 14.7.6 (23H626)","roots_installed":0,"name":"PCL-Mac","incident_id":"E508DEA4-59B2-4315-AAFA-64B243A567CB"}
+{
+  "uptime" : 59000,
+  "procRole" : "Foreground",
+  "version" : 2,
+  "userID" : 501,
+  "deployVersion" : 210,
+  "modelCode" : "Mac15,13",
+  "coalitionID" : 8076,
+  "osVersion" : {
+    "train" : "macOS 14.7.6",
+    "build" : "23H626",
+    "releaseType" : "User"
+  },
+  "captureTime" : "2025-05-25 18:11:54.8149 +0800",
+  "codeSigningMonitor" : 1,
+  "incident" : "E508DEA4-59B2-4315-AAFA-64B243A567CB",
+  "pid" : 11536,
+  "translated" : false,
+  "cpuType" : "ARM-64",
+  "roots_installed" : 0,
+  "bug_type" : "309",
+  "procLaunch" : "2025-05-25 18:11:42.2683 +0800",
+  "procStartAbsTime" : 1434827946799,
+  "procExitAbsTime" : 1435129030797,
+  "procName" : "PCL-Mac",
+  "procPath" : "\/Volumes\/VOLUME\/*\/PCL-Mac.app\/Contents\/MacOS\/PCL-Mac",
+  "bundleInfo" : {"CFBundleShortVersionString":"1.0","CFBundleVersion":"1","CFBundleIdentifier":"io.github.pcl-communtiy.PCL-Mac"},
+  "storeInfo" : {"deviceIdentifierForVendor":"409D82BC-ACA1-55AB-9FD1-026A9A5B8135","thirdParty":true},
+  "parentProc" : "launchd",
+  "parentPid" : 1,
+  "coalitionName" : "io.github.pcl-communtiy.PCL-Mac",
+  "crashReporterKey" : "6E2B97B7-1933-11C9-28F0-E5D8451867D6",
+  "codeSigningID" : "io.github.pcl-communtiy.PCL-Mac",
+  "codeSigningTeamID" : "",
+  "codeSigningFlags" : 570503953,
+  "codeSigningValidationCategory" : 10,
+  "codeSigningTrustLevel" : 4294967295,
+  "instructionByteStream" : {"beforePC":"8wMFqvUDBKr4AwOq9gMCqvQDAar3AwCqSPY0kAihRfkIAUD5qIMb+A==","atPC":"\/\/8Aqf8PAPmoAIBS6BMAeUgBgFIIAKFyiQCAUugPALnpFwC5fwAAcQ=="},
+  "wakeTime" : 889,
+  "sleepWakeUUID" : "38F14CC9-2972-4064-862E-0C3734CDA61E",
+  "sip" : "enabled",
+  "vmRegionInfo" : "0x16d1cbfe8 is in 0x1699c8000-0x16d1cc000;  bytes after start: 58736616  bytes before end: 23\n      REGION TYPE                    START - END         [ VSIZE] PRT\/MAX SHRMOD  REGION DETAIL\n      MALLOC_MEDIUM               140000000-148000000    [128.0M] rw-\/rwx SM=PRV  \n      GAP OF 0x219c8000 BYTES\n--->  STACK GUARD                 1699c8000-16d1cc000    [ 56.0M] ---\/rwx SM=NUL  stack guard for thread 0\n      Stack                       16d1cc000-16d9c8000    [ 8176K] rw-\/rwx SM=SHM  thread 0",
+  "exception" : {"codes":"0x0000000000000002, 0x000000016d1cbfe8","rawCodes":[2,6125567976],"type":"EXC_BAD_ACCESS","signal":"SIGSEGV","subtype":"KERN_PROTECTION_FAILURE at 0x000000016d1cbfe8"},
+  "termination" : {"flags":0,"code":11,"namespace":"SIGNAL","indicator":"Segmentation fault: 11","byProc":"exc handler","byPid":11536},
+  "vmregioninfo" : "0x16d1cbfe8 is in 0x1699c8000-0x16d1cc000;  bytes after start: 58736616  bytes before end: 23\n      REGION TYPE                    START - END         [ VSIZE] PRT\/MAX SHRMOD  REGION DETAIL\n      MALLOC_MEDIUM               140000000-148000000    [128.0M] rw-\/rwx SM=PRV  \n      GAP OF 0x219c8000 BYTES\n--->  STACK GUARD                 1699c8000-16d1cc000    [ 56.0M] ---\/rwx SM=NUL  stack guard for thread 0\n      Stack                       16d1cc000-16d9c8000    [ 8176K] rw-\/rwx SM=SHM  thread 0",
+  "extMods" : {"caller":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"system":{"thread_create":0,"thread_set_state":40,"task_for_pid":10},"targeted":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"warnings":0},
+  "faultingThread" : 0,
+  "threads" : [{"triggered":true,"id":600878,"threadState":{"x":[{"value":6125575040},{"value":6125571184},{"value":1024},{"value":0},{"value":0},{"value":0},{"value":0},{"value":1},{"value":13597786943763579019},{"value":1024},{"value":0},{"value":0},{"value":0},{"value":0},{"value":1107296256},{"value":8206634648,"symbolLocation":0,"symbol":"OBJC_CLASS_$___NSArrayI"},{"value":6518255764,"symbolLocation":0,"symbol":"FSGetCanonicalPath"},{"value":8381703688},{"value":0},{"value":0},{"value":6125571184},{"value":0},{"value":1024},{"value":6125575040},{"value":0},{"value":3592396301},{"value":1},{"value":110},{"value":848}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6220596991826995416},"cpsr":{"value":2147487744},"fp":{"value":6125571168},"sp":{"value":6125567968},"esr":{"value":2449473607,"description":"(Data Abort) byte write Translation fault"},"pc":{"value":6518216800,"matchesCrashFrame":1},"far":{"value":6125567976}},"queue":"com.apple.main-thread","frames":[{"imageOffset":88160,"symbol":"FSGetCanonicalPathWithIsMountPoint(char const*, char*, unsigned int, unsigned char, int*, unsigned char*)","symbolLocation":72,"imageIndex":2},{"imageOffset":198872,"symbol":"parseAttributeBuffer(__CFAllocator const*, unsigned char const*, unsigned char, attrlist const*, void const*, void**, _FileAttributes*, unsigned int*, unsigned char)","symbolLocation":3112,"imageIndex":3},{"imageOffset":20728,"symbol":"corePropertyProviderPrepareValues(__CFURL const*, __FileCache*, __CFString const* const*, void const**, long, void const*, __CFError**)","symbolLocation":1340,"imageIndex":3},{"imageOffset":19272,"symbol":"prepareValuesForBitmap(__CFURL const*, __FileCache*, _FilePropertyBitmap*, __CFError**)","symbolLocation":460,"imageIndex":3},{"imageOffset":54932,"symbol":"_FSURLCopyResourcePropertiesForKeysInternal(__CFURL const*, __CFArray const*, void*, __CFError**, unsigned char)","symbolLocation":1160,"imageIndex":3},{"imageOffset":528068,"symbol":"CFURLCopyResourcePropertiesForKeys","symbolLocation":100,"imageIndex":4},{"imageOffset":1012184,"symbol":"_CFURLCopyFileReferenceURLPath","symbolLocation":180,"imageIndex":4},{"imageOffset":1011568,"symbol":"CFURLCreateFileReferenceURL","symbolLocation":244,"imageIndex":4},{"imageOffset":1034336,"symbol":"-[NSURL fileReferenceURL]","symbolLocation":104,"imageIndex":4},{"imageOffset":1141452,"symbol":"-[NSFileManager componentsToDisplayForPath:]","symbolLocation":84,"imageIndex":5},{"imageOffset":372156,"symbol":"pathComponentFromPath","symbolLocation":548,"imageIndex":5},{"imageOffset":370988,"symbol":"-[NSError(NSErrorPrivate) _formatCocoaErrorString:parameters:applicableFormatters:count:]","symbolLocation":220,"imageIndex":5},{"imageOffset":369604,"symbol":"-[NSError(NSErrorPrivate) _cocoaErrorString:fromBundle:tableName:]","symbolLocation":544,"imageIndex":5},{"imageOffset":368908,"symbol":"-[NSError(NSErrorPrivate) _cocoaErrorString:]","symbolLocation":72,"imageIndex":5},{"imageOffset":368592,"symbol":"-[NSError _cocoaErrorStringWithKind:variant:]","symbolLocation":144,"imageIndex":5},{"imageOffset":368392,"symbol":"-[NSError _cocoaErrorStringWithKind:]","symbolLocation":324,"imageIndex":5},{"imageOffset":367936,"symbol":"-[NSError _retainedUserInfoCallBackForKey:]","symbolLocation":68,"imageIndex":5},{"imageOffset":656564,"symbol":"____CFErrorSetCallBackForDomainNoLock_block_invoke","symbolLocation":32,"imageIndex":4},{"imageOffset":656360,"symbol":"_CFErrorCopyUserInfoKeyFromCallBack","symbolLocation":92,"imageIndex":4},{"imageOffset":655424,"symbol":"_CFErrorFormatDebugDescriptionAux","symbolLocation":120,"imageIndex":4},{"imageOffset":655256,"symbol":"_CFErrorCreateDebugDescription","symbolLocation":88,"imageIndex":4},{"imageOffset":367844,"symbol":"-[NSError description]","symbolLocation":16,"imageIndex":5},{"imageOffset":5666196,"symbol":"protocol witness for CustomStringConvertible.description.getter in conformance NSObject","symbolLocation":32,"imageIndex":5},{"imageOffset":889264,"symbol":"_print_unlocked<A, B>(_:_:)","symbolLocation":1104,"imageIndex":6},{"imageOffset":270716,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1},{"imageOffset":268984,"imageIndex":1},{"imageOffset":270780,"imageIndex":1}]},{"id":600893,"frames":[{"imageOffset":7456,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":8}],"threadState":{"x":[{"value":6135066624},{"value":8195},{"value":6134530048},{"value":0},{"value":409602},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6135066624},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6463380768},"far":{"value":0}}},{"id":601000,"frames":[{"imageOffset":7456,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":8}],"threadState":{"x":[{"value":6134493184},{"value":3335},{"value":6133956608},{"value":0},{"value":409602},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6134493184},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6463380768},"far":{"value":0}}}],
+  "usedImages" : [
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 4337582080,
+    "size" : 49152,
+    "uuid" : "bc93a03a-e201-3510-816f-92da60f1109b",
+    "path" : "\/usr\/lib\/libobjc-trampolines.dylib",
+    "name" : "libobjc-trampolines.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4332945408,
+    "CFBundleShortVersionString" : "1.0",
+    "CFBundleIdentifier" : "io.github.pcl-communtiy.PCL-Mac",
+    "size" : 442368,
+    "uuid" : "8807e47b-3f0c-303c-b2ea-1a32753baa1b",
+    "path" : "\/Volumes\/VOLUME\/*\/PCL-Mac.app\/Contents\/MacOS\/PCL-Mac",
+    "name" : "PCL-Mac",
+    "CFBundleVersion" : "1"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6518128640,
+    "CFBundleShortVersionString" : "1333",
+    "CFBundleIdentifier" : "com.apple.CoreServices.CarbonCore",
+    "size" : 3170304,
+    "uuid" : "78261def-91ac-322e-8b7e-7248510a6796",
+    "path" : "\/System\/Library\/Frameworks\/CoreServices.framework\/Versions\/A\/Frameworks\/CarbonCore.framework\/Versions\/A\/CarbonCore",
+    "name" : "CarbonCore",
+    "CFBundleVersion" : "1333"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6521298944,
+    "CFBundleShortVersionString" : "505",
+    "CFBundleIdentifier" : "com.apple.CoreServicesInternal",
+    "size" : 266228,
+    "uuid" : "f24e6bd4-788e-38bd-b54c-06ef76391158",
+    "path" : "\/System\/Library\/PrivateFrameworks\/CoreServicesInternal.framework\/Versions\/A\/CoreServicesInternal",
+    "name" : "CoreServicesInternal",
+    "CFBundleVersion" : "505"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6463799296,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "com.apple.CoreFoundation",
+    "size" : 5083136,
+    "uuid" : "2b20500a-bcca-3a13-9dd0-934dd58a779c",
+    "path" : "\/System\/Library\/Frameworks\/CoreFoundation.framework\/Versions\/A\/CoreFoundation",
+    "name" : "CoreFoundation",
+    "CFBundleVersion" : "2602.0.902"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6481977344,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "com.apple.Foundation",
+    "size" : 12967936,
+    "uuid" : "fd237f18-5366-346c-b9c4-2aae82874d20",
+    "path" : "\/System\/Library\/Frameworks\/Foundation.framework\/Versions\/C\/Foundation",
+    "name" : "Foundation",
+    "CFBundleVersion" : "2602.0.902"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6728515584,
+    "size" : 5627904,
+    "uuid" : "2f8ba773-d189-30ed-817b-58160dd3e9f5",
+    "path" : "\/usr\/lib\/swift\/libswiftCore.dylib",
+    "name" : "libswiftCore.dylib"
+  },
+  {
+    "size" : 0,
+    "source" : "A",
+    "base" : 0,
+    "uuid" : "00000000-0000-0000-0000-000000000000"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6463373312,
+    "size" : 53248,
+    "uuid" : "57cf0002-c127-3580-a0b7-fd447cc0f745",
+    "path" : "\/usr\/lib\/system\/libsystem_pthread.dylib",
+    "name" : "libsystem_pthread.dylib"
+  }
+],
+  "sharedCache" : {
+  "base" : 6458900480,
+  "size" : 4213145600,
+  "uuid" : "67086588-df82-3b28-9ac0-e3c2c488afcd"
+},
+  "vmSummary" : "ReadOnly portion of Libraries: Total=1.0G resident=0K(0%) swapped_out_or_unallocated=1.0G(100%)\nWritable regions: Total=1.3G written=0K(0%) resident=0K(0%) swapped_out=0K(0%) unallocated=1.3G(100%)\n\n                                VIRTUAL   REGION \nREGION TYPE                        SIZE    COUNT (non-coalesced) \n===========                     =======  ======= \nActivity Tracing                   256K        1 \nAttributeGraph Data               1024K        1 \nColorSync                          560K       26 \nCoreAnimation                      448K       28 \nCoreGraphics                        32K        2 \nFoundation                          16K        1 \nKernel Alloc Once                   32K        1 \nMALLOC                             1.2G       78 \nMALLOC guard page                  288K       18 \nSTACK GUARD                       56.0M        3 \nStack                             9264K        3 \nVM_ALLOCATE                        128K        8 \n__AUTH                            1429K      260 \n__AUTH_CONST                      23.5M      443 \n__CTF                               824        1 \n__DATA                            9919K      430 \n__DATA_CONST                      21.9M      448 \n__DATA_DIRTY                      1298K      139 \n__FONT_DATA                          4K        1 \n__LINKEDIT                       525.4M        3 \n__OBJC_RO                         71.9M        1 \n__OBJC_RW                         2200K        1 \n__TEXT                           544.0M      465 \ndyld private memory                272K        2 \nmapped file                      294.1M       34 \nshared memory                      848K       13 \n===========                     =======  ======= \nTOTAL                              2.8G     2411 \n",
+  "legacyInfo" : {
+  "threadTriggered" : {
+    "queue" : "com.apple.main-thread"
+  }
+},
+  "logWritingSignature" : "f604783fd28f79277eb1357a11af17af843c7f38",
+  "trialInfo" : {
+  "rollouts" : [
+    {
+      "rolloutId" : "645eb1d0417dab722a215927",
+      "factorPackIds" : {
+
+      },
+      "deploymentId" : 240000005
+    },
+    {
+      "rolloutId" : "654439cdafbf5b61207873a9",
+      "factorPackIds" : {
+
+      },
+      "deploymentId" : 240000004
+    }
+  ],
+  "experiments" : [
+    {
+      "treatmentId" : "f18344bb-554f-48ae-8449-e108a8813a55",
+      "experimentId" : "6685b5584477001000e8c6c9",
+      "deploymentId" : 400000009
+    }
+  ]
+}
+}
+
+Model: Mac15,13, BootROM 10151.140.19.700.2, proc 8:4:4 processors, 24 GB, SMC 
+Graphics: Apple M3, Apple M3, Built-In
+Display: Color LCD, spdisplays_2880x1864Retina, Main, MirrorOff, Online
+Memory Module: LPDDR5, Hynix
+AirPort: spairport_wireless_card_type_wifi (0x14E4, 0x4388), wl0: Apr  4 2024 20:57:11 version 23.30.58.0.41.51.138 FWID 01-baea9d27
+AirPort: 
+Bluetooth: Version (null), 0 services, 0 devices, 0 incoming serial ports
+Network Service: Wi-Fi, AirPort, en0
+USB Device: USB31Bus
+USB Device: USB31Bus
+Thunderbolt Bus: MacBook Air, Apple Inc.
+Thunderbolt Bus: MacBook Air, Apple Inc.
